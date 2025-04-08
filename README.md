@@ -1,27 +1,41 @@
-# GeradorResumosArtigos
+### Sistema Gerador de Resumo de Artigos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+## Stack utilizada
 
-## Development server
+Frontend: Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Backend: Node.js + TypeScript
 
-## Code scaffolding
+API externa: OpenAI (GPT)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Comunicação: API REST (Express)
 
-## Build
+Outros: Boas práticas de desenvolvimento, estrutura modular, deploy-ready.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Descrição
 
-## Running unit tests
+Este projeto é um sistema fullstack que permite ao usuário enviar artigos (em texto ou link) para gerar um resumo automático, utilizando a inteligência artificial da OpenAI (GPT). O sistema possui:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Interface web interativa desenvolvida com Angular
 
-## Running end-to-end tests
+Backend robusto em Node.js + TypeScript
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Integração com a API da OpenAI
 
-## Further help
+Suporte a upload de texto ou link
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Estrutura pronta para deploy e escalabilidade
+
+## Funcionalidades
+
+Upload de texto/artigo/link
+
+Resumo automático com IA
+
+Interface responsiva
+
+Tema claro/escuro (toggle)
+
+Armazenamento de preferência do usuário (localStorage)
+
+Boas práticas de código e organização em módulos
