@@ -1,22 +1,19 @@
-.footer-container {
-    background-color: #f5f7fa;
-    padding: 1rem 2rem;
-    border-top: 2px solid #e0e0e0;
-    font-family: 'Segoe UI', sans-serif;
-
-    .footer-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+footer {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  text-align: center;
+  border-top: 1px solid var(--card-border);
+  transition: background-color 1.5s, color 1.5s, border-color 1.5s;
 }
 
-@media (max-width: 600px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--btn-bg);
 }

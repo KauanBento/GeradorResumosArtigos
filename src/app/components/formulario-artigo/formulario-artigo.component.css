@@ -1,0 +1,77 @@
+section {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 1.5s, color 1.5s;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    gap: 0.5rem;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: background-color 1.5s, border-color 1.5s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: var(--btn-bg, #007bff);
+    color: var(--btn-text, #fff);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+button:hover {
+    background-color: var(--btn-bg-hover, #0056b3);
+}
+
+button[type="reset"] {
+    background-color: var(--reset-bg, #6c757d);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--reset-bg-hover, #5a6268);
+}
+
+button[type="button"] {
+    background-color: var(--alt-btn-bg, #28a745);
+}
+
+button[type="button"]:hover {
+    background-color: var(--alt-btn-bg-hover, #218838);
+}

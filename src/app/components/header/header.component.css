@@ -10,18 +10,6 @@
   transition: 1.5s;
 }
 
-.header-container-dark {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
-  background-color: #000000;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 20px 20px;
-  transition: 1.5s;
-}
-
 .botao-tema {
   width: 40px;
   height: 20px;
@@ -46,19 +34,27 @@
   transition: 1.5s;
 }
 
-#toggle-tema:checked + .botao-tema::before {
-  background-color: #000000;
-  transition: 1.5s;
+#toggle-tema:checked+.botao-tema::before {
   transform: translateX(20px);
+  transition: 1.5s;
 }
+
+.icone-tema {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 16px;
+  z-index: 0;
+  transition: 1.5s;
+}
+
+.icone-tema.icone-sol { opacity: 1; }
+.icone-tema.icone-lua { opacity: 0; }
+
+#toggle-tema:checked + .botao-tema .icone-sol { opacity: 0; }
+#toggle-tema:checked + .botao-tema .icone-lua { opacity: 1; }
 
 .header-container .logo h1 {
-  font-size: 2rem;
-  margin: 0;
-  font-weight: 600;
-}
-
-.header-container-dark .logo h1 {
   font-size: 2rem;
   margin: 0;
   font-weight: 600;
@@ -69,24 +65,7 @@
   gap: 2rem;
 }
 
-.header-container-dark .nav-menu {
-  display: flex;
-  gap: 2rem;
-}
-
 .header-container .nav-menu button {
-  position: relative;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  outline: none;
-}
-
-.header-container-dark .nav-menu button {
   position: relative;
   background: transparent;
   border: none;
@@ -110,25 +89,8 @@
   transform: translateX(-50%);
 }
 
-.header-container-dark .nav-menu button::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  height: 1px;
-  width: 0%;
-  background-color: #fff;
-  transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
-  transform: translateX(-50%);
-}
-
 .header-container .nav-menu button:hover::after,
 .header-container .nav-menu button.active::after {
-  width: 100%;
-}
-
-.header-container-dark .nav-menu button:hover::after,
-.header-container-dark .nav-menu button.active::after {
   width: 100%;
 }
 
@@ -138,17 +100,7 @@
     gap: 1rem;
   }
 
-  .header-container-dark {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   .header-container .nav-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .header-container-dark .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
   }

@@ -1,92 +1,97 @@
-  .home-container {
-    font-family: 'Segoe UI', sans-serif;
-    max-width: 100vh;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  
-    .hero {
-      text-align: center;
-      margin-bottom: 3rem;
-  
-      h1 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 0.5rem;
-      }
-  
-      p {
-        font-size: 1.1rem;
-        color: #666;
-        margin-bottom: 1.5rem;
-      }
-  
-      .hero-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-  
-        .btn {
-          background-color: #4a90e2;
-          color: white;
-          border: none;
-          padding: 0.8rem 1.5rem;
-          font-size: 1rem;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background 0.3s ease;
-  
-          &:hover {
-            background-color: #3a78c2;
-          }
-        }
-  
-        .btn-outline {
-          background: transparent;
-          color: #4a90e2;
-          border: 2px solid #4a90e2;
-  
-          &:hover {
-            background-color: #e6f0fb;
-          }
-        }
-      }
-    }
-  
-    .features {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-  
-      .feature-card {
-        flex: 1 1 30%;
-        background-color: #ffffff;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s;
-  
-        h3 {
-          color: #4a90e2;
-          margin-bottom: 0.5rem;
-        }
-  
-        p {
-          color: #555;
-          font-size: 0.95rem;
-        }
-  
-        &:hover {
-          transform: translateY(-5px);
-        }
-      }
-    }
-  
-    @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-      }
-    }
+.home-container {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 100vh;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.home-container .hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-container .hero h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  transition: 2s;
+}
+
+.home-container .hero p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  transition: 2s;
+}
+
+.home-container .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.home-container .hero-buttons .btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.home-container .hero-buttons .btn:hover {
+  background-color: #3a78c2;
+}
+
+.home-container .hero-buttons .btn-outline {
+  background: transparent;
+  color: #4a90e2;
+  border: 2px solid #4a90e2;
+  transition: 0.3s ease;
+}
+
+.home-container .hero-buttons .btn-outline:hover {
+  background-color: var(--btn-outline-hover);
+}
+
+.home-container .features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.home-container .features .feature-card {
+  flex: 1 1 30%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: 2s, transform 0.2s;
+}
+
+.home-container .features .feature-card h3 {
+  color: #4a90e2;
+  margin-bottom: 0.5rem;
+  transition: 2s;
+}
+
+.home-container .features .feature-card p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: 2s;
+}
+
+.home-container .features .feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .home-container .features {
+    flex-direction: column;
   }
-  
+}

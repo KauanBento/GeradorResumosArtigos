@@ -3,10 +3,17 @@
     <h1>ResumoSmart</h1>
   </div>
   <nav class="nav-menu">
-    <button routerLink="/home" routerLinkActive="active">Início</button>
-    <button routerLink="/artigos" routerLinkActive="active">Artigos</button>
-    <button routerLink="/cadastrar" routerLinkActive="active">Cadastrar</button>
-    <input type="checkbox" id="toggle-tema" (change)="alternarTema()" hidden />
-    <label for="toggle-tema" class="botao-tema"></label>
+    <button (click)="navegarParaHome()">Início</button>
+    <button (click)="navegarParaArtigos()">Artigos</button>
+    <button (click)="navegarParaCadastro()">Cadastrar</button>
+
+    <div class="tema-conteiner">
+      <input type="checkbox" id="toggle-tema" (change)="alternarTema()" hidden />
+      <label for="toggle-tema" class="botao-tema">
+        <img src="brilho-do-sol.png" class="icone-tema icone-sol">
+        <img src="lua-crescente.png" class="icone-tema icone-lua">
+      </label>
+    </div>
+
   </nav>
 </header>

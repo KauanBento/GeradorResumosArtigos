@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -8,18 +8,30 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(private router: Router) { }
+
+  navegarParaHome() {
+    this.router.navigate(['/home']);
+  }
+
+  navegarParaArtigos() {
+    this.router.navigate(['/artigos']);
+  }
+
+  navegarParaCadastro() {
+    this.router.navigate(['/cadastrar']);
+  }
 
   alternarTema() {
-    const header = document.querySelector('app-header .header-container, app-header .header-container-dark');
+    document.body.classList.toggle('dark-mode');
+    const tema = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+    localStorage.setItem('temaPreferido', tema);
+  }
 
-    if (header?.classList.contains('header-container')) {
-      header.classList.remove('header-container');
-      header.classList.add('header-container-dark');
-      localStorage.setItem('temaPreferido', 'header-container-dark');
-    } else {
-      header?.classList.remove('header-container-dark');
-      header?.classList.add('header-container');
-      localStorage.setItem('temaPreferido', 'header-container');
+  ngOnInit() {
+    const temaSalvo = localStorage.getItem('temaPreferido');
+    if (temaSalvo === 'dark-mode') {
+      document.body.classList.add('dark-mode');
     }
   }
 

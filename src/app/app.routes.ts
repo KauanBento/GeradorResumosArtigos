@@ -4,10 +4,13 @@ import { FormularioArtigoComponent } from './components/formulario-artigo/formul
 import { DetalhesArtigoComponent } from './components/detalhes-artigo/detalhes-artigo.component';
 import { ListaArtigoComponent } from './components/lista-artigo/lista-artigo.component';
 import { PaginaBuscaComponent } from './components/pagina-busca/pagina-busca.component';
+import { bootstrapApplication } from '@angular/platform-browser';
 
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'cadastrar', component: FormularioArtigoComponent },
     { path: 'artigos/:id', component: DetalhesArtigoComponent },
+    { path: 'artigos', component: ListaArtigoComponent },
+    { path: '**', redirectTo: 'home' },
 ];
