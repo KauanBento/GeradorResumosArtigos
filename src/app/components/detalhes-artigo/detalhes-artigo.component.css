@@ -1,0 +1,80 @@
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background-color: var(--card-color);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 1.5s;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+strong {
+    color: var(--btn-bg);
+    font-weight: 600;
+}
+
+button {
+    margin-right: 12px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"] {
+    background-color: #28a745;
+}
+
+button[type="button"]:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    section {
+        margin: 20px 10px;
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

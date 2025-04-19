@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,5 +11,10 @@ import { FooterComponent } from "../footer/footer.component";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private readonly router: Router) { }
+
+  navegarParaCadastro() {
+    this.router.navigate(['/cadastrar']);
+  }
 
 }

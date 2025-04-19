@@ -4,7 +4,8 @@ footer {
   padding: 1rem clamp(1rem, 4vw, 3rem);
   text-align: center;
   border-top: 1px solid var(--card-border);
-  transition: background-color 1.5s, color 1.5s, border-color 1.5s;
+  margin-top: 150px;
+  transition: 1.5s;
 }
 
 footer a {

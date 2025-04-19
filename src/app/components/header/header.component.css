@@ -7,7 +7,7 @@
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 20px 20px;
-  transition: 1.5s;
+  transition: 2s;
 }
 
 .botao-tema {
@@ -31,12 +31,12 @@
   background-color: #007bff;
   top: 1px;
   left: 1px;
-  transition: 1.5s;
+  transition: 2s;
 }
 
 #toggle-tema:checked+.botao-tema::before {
   transform: translateX(20px);
-  transition: 1.5s;
+  transition: 2s;
 }
 
 .icone-tema {
@@ -45,19 +45,21 @@
   left: 2px;
   height: 16px;
   z-index: 0;
-  transition: 1.5s;
+  transition: 2s;
 }
 
 .icone-tema.icone-sol { opacity: 1; }
 .icone-tema.icone-lua { opacity: 0; }
 
-#toggle-tema:checked + .botao-tema .icone-sol { opacity: 0; }
-#toggle-tema:checked + .botao-tema .icone-lua { opacity: 1; }
+#toggle-tema:checked + .botao-tema .icone-sol { opacity: 0;   transform: translateX(20px);
+}
+#toggle-tema:checked + .botao-tema .icone-lua { opacity: 1;   transform: translateX(20px);
+}
 
 .header-container .logo h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
-  font-weight: 600;
+  font-weight: 1000;
 }
 
 .header-container .nav-menu {
@@ -94,7 +96,8 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
   .header-container {
     flex-direction: column;
     gap: 1rem;

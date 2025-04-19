@@ -1,13 +1,6 @@
-<section>
-    <h2>Meus Artigos</h2>
-    <input type="text" placeholder="Buscar por título...">
-    <ul>
-      <li>
-        <h3></h3>
-        <p></p>
-        <button>Ver</button>
-        <button>Editar</button>
-        <button>Excluir</button>
-      </li>
-    </ul>
-  </section>
+<div class="titulo">
+  <h2>Artigos</h2>
+</div>
+<div class="card-content">
+  <app-artigo-card *ngFor="let artigo of artigoList" [artigoData]="artigo"></app-artigo-card>
+</div>

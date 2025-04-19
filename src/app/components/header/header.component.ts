@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  constructor(private router: Router) { }
+
+  constructor(private readonly router: Router) { }
 
   navegarParaHome() {
     this.router.navigate(['/home']);
@@ -30,9 +31,11 @@ export class HeaderComponent {
 
   ngOnInit() {
     const temaSalvo = localStorage.getItem('temaPreferido');
+    const toggle = document.getElementById('toggle-tema') as HTMLInputElement;
+
     if (temaSalvo === 'dark-mode') {
       document.body.classList.add('dark-mode');
+      toggle.checked = true;
     }
   }
-
 }

@@ -1,13 +1,16 @@
 <section>
-    <h2></h2>
-    <p><strong>Autor:</strong></p>
-    <p><strong>Fonte:</strong></p>
-    <p></p>
-  
+    <h2>{{ artigo?.titulo }}</h2>
+    <p><strong>Autor:</strong>{{ artigo?.autor }}</p>
+    <p><strong>Fonte:</strong>{{ artigo?.fonte }}</p>
+    <p> {{  artigo?.conteudo }}</p>
+
     <h3>Resumo Gerado</h3>
-    <p></p>
-  
-    <button>Regerar Resumo</button>
-    <button>Editar</button>
+    <p> {{ artigo?.resumo}}</p>
+
+    <p><strong>Link:</strong>{{ artigo?.url }}</p>
+
+    <button type="button">Gerar Resumo</button>
+    <button (click)="editarCard()">Editar</button>
     <button>Excluir</button>
+    <button (click)="voltarPagina()">Voltar</button>
   </section>

@@ -89,7 +89,6 @@
   transform: translateY(-5px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .home-container .features {
     flex-direction: column;

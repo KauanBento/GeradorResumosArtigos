@@ -1,13 +1,27 @@
 <section>
-    <h2>Editar Artigo</h2>
-    <form>
-      <label>Título:<input type="text" name="title"></label>
-      <label>Autor:<input type="text" name="author"></label>
-      <label>Fonte:<input type="text" name="source"></label>
-      <label>URL:<input type="url" name="url"></label>
-      <label>Conteúdo:<textarea name="content"></textarea></label>
-      <button type="submit">Salvar</button>
-      <button type="reset">Limpar</button>
-      <button type="button">Gerar Resumo</button>
-    </form>
-  </section>
+  <h2>Editar Artigo</h2>
+  <form (ngSubmit)="editarArtigo()">
+    <label>
+      Título:
+      <input type="text" name="titulo" [(ngModel)]="artigo.titulo">
+    </label>
+    <label>
+      Autor:
+      <input type="text" name="autor" [(ngModel)]="artigo.autor">
+    </label>
+    <label>
+      Fonte:
+      <input type="text" name="fonte" [(ngModel)]="artigo.fonte">
+    </label>
+    <label>
+      URL:
+      <input type="url" name="url" [(ngModel)]="artigo.url">
+    </label>
+    <label>
+      Conteúdo:
+      <textarea name="conteudo" [(ngModel)]="artigo.conteudo"></textarea>
+    </label>
+
+    <button type="submit">Editar</button>
+  </form>
+</section>
