@@ -8,7 +8,7 @@ import { NaoEncontradaComponent } from './components/nao-encontrada/nao-encontra
 
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: '', component: HomeComponent },
     { path: 'cadastrar', component: FormularioArtigoComponent },
     { path: 'artigos/:id', component: DetalhesArtigoComponent },
     { path: 'artigos', component: ListaArtigoComponent },
